@@ -71,7 +71,8 @@ void AProjectile::Explode()
 	FGameplayEventData Data;
 	//Data.Target = HitActor;
 	Data.TargetData = UAbilitySystemBlueprintLibrary::AbilityTargetDataFromLocations(TargetDataLocationInfo, TargetDataLocationInfo);
-	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(Instigator, GameplayEventHitTag, Data);
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+		GetInstigator(), GameplayEventHitTag, Data);
 
 	OnExplode();
 }
@@ -96,7 +97,8 @@ void AProjectile::HandleHitActor(AActor* HitActor)
 	FGameplayEventData Data;
 	Data.Target = HitActor;
 	Data.TargetData = UAbilitySystemBlueprintLibrary::AbilityTargetDataFromLocations(TargetDataLocationInfo, TargetDataLocationInfo);
-	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(Instigator, GameplayEventHitTag, Data);
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+		GetInstigator(), GameplayEventHitTag, Data);
 
 	OnExplode();
 }

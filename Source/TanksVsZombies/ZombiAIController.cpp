@@ -40,15 +40,15 @@ void AZombiAIController::Tick(float DeltaTime)
 	}
 }
 
-void AZombiAIController::Possess(APawn* InPawn)
+void AZombiAIController::OnPossess(APawn* InPawn)
 {
-	Super::Possess(InPawn);
+	Super::OnPossess(InPawn);
 
 	ZombiePawn = Cast<AZombie>(InPawn);
 }
 
-void AZombiAIController::UnPossess()
+void AZombiAIController::OnUnPossess()
 {
-	Super::UnPossess();
+	Super::OnUnPossess();
 	ZombiePawn = nullptr;
 }

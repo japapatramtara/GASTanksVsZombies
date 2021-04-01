@@ -47,7 +47,7 @@ protected:
 
 	/** The component used to handle ability system interactions */
 	UPROPERTY(BlueprintReadOnly, Category = Abilities)
-	UAbilitySystemComponent* AbilitySystemComponent;
+	class UTVZAbilitySystemComponent* AbilitySystemComponent;
 
 	/** The component used to handle ability system interactions */
 	UPROPERTY(BlueprintReadOnly, Category = Attributes)

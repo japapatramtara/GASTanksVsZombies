@@ -44,5 +44,5 @@ public:
 protected:
 
 	UFUNCTION()
-	virtual void OnRep_TurretYawSpeed();
+	virtual void OnRep_TurretYawSpeed(const FGameplayAttributeData& OldValue);
 };

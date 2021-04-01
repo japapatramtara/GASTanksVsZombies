@@ -64,20 +64,20 @@ public:
 protected:
 
 	UFUNCTION()
-	virtual void OnRep_AttackDamage();
+	virtual void OnRep_AttackDamage(const FGameplayAttributeData& OldValue);
 	
 	UFUNCTION()
-	virtual void OnRep_SightDistance();
+	virtual void OnRep_SightDistance(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_SightAngle();
+	virtual void OnRep_SightAngle(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_AttackDistance();
+	virtual void OnRep_AttackDistance(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_AttackAngle();
+	virtual void OnRep_AttackAngle(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_AttackCooldown();
+	virtual void OnRep_AttackCooldown(const FGameplayAttributeData& OldValue);
 };

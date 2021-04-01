@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PawnWithAbilities.h"
+#include "TVZAbilitySystemComponent.h"
 #include "Components/ArrowComponent.h"
 #include "Abilities//TVZGameplayAbility.h"
 #include "Abilities/TVZAttributeSetBase.h"
@@ -19,7 +20,7 @@ APawnWithAbilities::APawnWithAbilities()
 	Direction->SetupAttachment(RootComponent);
 
 	// Create ability system component, and set it to be explicitly replicated
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	AbilitySystemComponent = CreateDefaultSubobject<UTVZAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	AbilitySystemComponent->SetIsReplicated(true);
 
 	// Create the attribute set, this replicates by default
@@ -58,9 +59,16 @@ void APawnWithAbilities::AddStartupAbilitiesAndEffects()
 {
 	if (HasAuthority())
 	{
-		for (TSubclassOf<UTVZGameplayAbility>&  AbilityToGive : AbilitiesToGive)
+		AbilitySystemComponent->ClearAllAbilities();
+		AbilitySystemComponent->RemoveAllActiveEffectsWithTag(FGameplayTag::RequestGameplayTag("Bonus"));
+		
+		for (TSubclassOf<UTVZGameplayAbility>& AbilityToGive : AbilitiesToGive)
+		{
 			AbilitySystemComponent->GiveAbility(FGameplayAbilitySpec(AbilityToGive));
+		}
 
+		const auto& TimerMgr = GetWorld()->GetTimerManager();
+		
 		for (TSubclassOf<UGameplayEffect>& GameplayEffect : PassiveEffects)
 		{
 			FGameplayEffectContextHandle EffectContext = AbilitySystemComponent->MakeEffectContext();

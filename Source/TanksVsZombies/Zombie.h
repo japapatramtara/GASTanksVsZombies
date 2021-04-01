@@ -39,7 +39,7 @@ protected:
 	UZombieAttributeSet* ZombieAttributeSet;
 
 	UPROPERTY(EditAnywhere, Category = "Zombie")
-	TSubclassOf<UCameraShake> HitCameraShake;
+	TSubclassOf<UMatineeCameraShake> HitCameraShake;
 
 	//// The damage the zombie does per hit
 	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Zombie", meta = (ClampMin = "0.0"))

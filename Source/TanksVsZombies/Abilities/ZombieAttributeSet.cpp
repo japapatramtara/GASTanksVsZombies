@@ -35,32 +35,32 @@ void UZombieAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 	DOREPLIFETIME(UZombieAttributeSet, AttackCooldown);
 }
 
-void UZombieAttributeSet::OnRep_AttackDamage()
+void UZombieAttributeSet::OnRep_AttackDamage(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackDamage);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackDamage, OldValue);
 }
 
-void UZombieAttributeSet::OnRep_SightDistance()
+void UZombieAttributeSet::OnRep_SightDistance(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, SightDistance);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, SightDistance, OldValue);
 }
 
-void UZombieAttributeSet::OnRep_SightAngle()
+void UZombieAttributeSet::OnRep_SightAngle(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, SightAngle);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, SightAngle, OldValue);
 }
 
-void UZombieAttributeSet::OnRep_AttackDistance()
+void UZombieAttributeSet::OnRep_AttackDistance(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackDistance);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackDistance, OldValue);
 }
 
-void UZombieAttributeSet::OnRep_AttackAngle()
+void UZombieAttributeSet::OnRep_AttackAngle(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackAngle);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackAngle, OldValue);
 }
 
-void UZombieAttributeSet::OnRep_AttackCooldown()
+void UZombieAttributeSet::OnRep_AttackCooldown(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackCooldown);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UZombieAttributeSet, AttackCooldown, OldValue);
 }

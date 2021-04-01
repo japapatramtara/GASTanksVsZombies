@@ -9,6 +9,7 @@
 #include "PaperSpriteComponent.h"
 #include "Components/BoxComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "TVZAbilitySystemComponent.h"
 #include "Abilities/TankAttributeSet.h"
 
 ATank::ATank()
@@ -180,7 +181,21 @@ void ATank::MoveTank(float DeltaTime)
 
 		SetActorLocation(Pos);
 	}
-	
+
+	// CardA: resolve idle tag
+	if(AbilitySystemComponent)
+	{
+		if (!DesiredMovementDirection.IsNearlyZero())
+		{
+			AbilitySystemComponent->SetLooseGameplayTagCount(
+				FGameplayTag::RequestGameplayTag("Movement.Idle"),0);
+		}
+		else
+		{
+			AbilitySystemComponent->SetLooseGameplayTagCount(
+				FGameplayTag::RequestGameplayTag("Movement.Idle"),1);
+		}
+	}//< if(AbilitySystemComponent)	
 }
 
 void ATank::Fire1Pressed()

@@ -42,49 +42,49 @@ void UTVZAttributeSetBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
 
 }
 
-void UTVZAttributeSetBase::OnRep_Health()
+void UTVZAttributeSetBase::OnRep_Health(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Health);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Health, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_MaxHealth()
+void UTVZAttributeSetBase::OnRep_MaxHealth(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, MaxHealth);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, MaxHealth, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_Healing()
+void UTVZAttributeSetBase::OnRep_Healing(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Healing);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Healing, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_HealingMultiplier()
+void UTVZAttributeSetBase::OnRep_HealingMultiplier(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, HealingMultiplier);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, HealingMultiplier, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_YawSpeed()
+void UTVZAttributeSetBase::OnRep_YawSpeed(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, YawSpeed);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, YawSpeed, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_MoveSpeed()
+void UTVZAttributeSetBase::OnRep_MoveSpeed(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, MoveSpeed);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, MoveSpeed, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_DefensePower()
+void UTVZAttributeSetBase::OnRep_DefensePower(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, DefensePower);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, DefensePower, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_DamageMultiplier()
+void UTVZAttributeSetBase::OnRep_DamageMultiplier(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, DamageMultiplier);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, DamageMultiplier, OldValue);
 }
 
-void UTVZAttributeSetBase::OnRep_Damage()
+void UTVZAttributeSetBase::OnRep_Damage(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Damage);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTVZAttributeSetBase, Damage, OldValue);
 }
 
 void UTVZAttributeSetBase::AdjustAttributeForMaxChange(FGameplayAttributeData& AffectedAttribute,

@@ -21,7 +21,11 @@ ASpawner::ASpawner()
 void ASpawner::BeginPlay()
 {
 	Super::BeginPlay();
-	GetWorldTimerManager().SetTimer(SpawnTimerHandle, this, &ASpawner::SpawnEnemy, SpawnTimer, true);
+	static bool DoSpawn = false;
+	if (DoSpawn)
+	{
+		GetWorldTimerManager().SetTimer(SpawnTimerHandle, this, &ASpawner::SpawnEnemy, SpawnTimer, true);	
+	}	
 }
 
 void ASpawner::SpawnEnemy()

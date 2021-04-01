@@ -25,8 +25,8 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void Possess(APawn* InPawn) override;
+	virtual void OnPossess(APawn* InPawn) override;
 
-	virtual void UnPossess() override;
+	virtual void OnUnPossess() override;
 	
 };

@@ -83,7 +83,7 @@ void ATankTurret::FireProjectile(TSubclassOf<AProjectile> ProjectileToFire)
 		FActorSpawnParameters SpawnInfo;
 		SpawnInfo.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		SpawnInfo.Owner = OwningTank;
-		SpawnInfo.Instigator = Instigator;
+		SpawnInfo.Instigator = GetInstigator();
 		AProjectile* NewProj = World->SpawnActor<AProjectile>(ProjectileToFire, Loc, Rot, SpawnInfo);
 	}
 	else

@@ -2,6 +2,7 @@
 
 #include "Zombie.h"
 #include "Tank.h"
+#include "TVZAbilitySystemComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Abilities/ZombieAttributeSet.h"
 

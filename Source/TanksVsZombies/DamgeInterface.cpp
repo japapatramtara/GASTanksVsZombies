@@ -3,4 +3,4 @@
 #include "DamgeInterface.h"
 
 
-// Add default functionality here for any IDamgeInterface functions that are not pure virtual.
+// Add default functionality here for any IDamageInterface functions that are not pure virtual.

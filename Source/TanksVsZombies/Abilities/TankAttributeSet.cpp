@@ -32,7 +32,7 @@ void UTankAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	DOREPLIFETIME(UTankAttributeSet, TurretYawSpeed);
 }
 
-void UTankAttributeSet::OnRep_TurretYawSpeed()
+void UTankAttributeSet::OnRep_TurretYawSpeed(const FGameplayAttributeData& OldValue)
 {
-	GAMEPLAYATTRIBUTE_REPNOTIFY(UTankAttributeSet, TurretYawSpeed);
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UTankAttributeSet, TurretYawSpeed, OldValue);
 }

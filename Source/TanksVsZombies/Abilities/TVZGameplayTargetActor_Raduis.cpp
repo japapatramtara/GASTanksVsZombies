@@ -54,7 +54,6 @@ TArray<TWeakObjectPtr<AActor> >	ATVZGameplayTargetActor_Raduis::PerformOverlap(c
 
 	FCollisionQueryParams Params(SCENE_QUERY_STAT(RadiusTargetingOverlap), bTraceComplex);
 	Params.bReturnPhysicalMaterial = false;
-	Params.bTraceAsyncScene = false;
 	TArray<FOverlapResult> Overlaps;
 
 	if(bTraceByProfile)

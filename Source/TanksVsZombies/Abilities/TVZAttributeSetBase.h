@@ -84,29 +84,29 @@ protected:
 
 	// These OnRep functions exist to make sure that the ability system internal representations are synchronized properly during replication
 	UFUNCTION()
-	virtual void OnRep_Health();
+	virtual void OnRep_Health(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_MaxHealth();
+	virtual void OnRep_MaxHealth(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_Healing();
+	virtual void OnRep_Healing(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_HealingMultiplier();
+	virtual void OnRep_HealingMultiplier(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_YawSpeed();
+	virtual void OnRep_YawSpeed(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_MoveSpeed();
+	virtual void OnRep_MoveSpeed(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_DefensePower();
+	virtual void OnRep_DefensePower(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_DamageMultiplier();
+	virtual void OnRep_DamageMultiplier(const FGameplayAttributeData& OldValue);
 
 	UFUNCTION()
-	virtual void OnRep_Damage();
+	virtual void OnRep_Damage(const FGameplayAttributeData& OldValue);
 };
